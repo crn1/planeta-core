@@ -1,5 +1,16 @@
 <?php
 
+function planeta_register_welcome_page() {
+	add_submenu_page(
+		'themes.php',
+		esc_html__('Planeta Theme', 'planeta'),
+		esc_html__('Planeta Theme', 'planeta'),
+		'manage_options',
+		'planeta_welcome',
+		'planeta_get_welcome_page', 0);
+}
+add_action('admin_menu', 'planeta_register_welcome_page');
+
 function planeta_get_welcome_page()
 {
 	$welcome = esc_html__("Welcome to the Planeta Theme!", 'planeta');
@@ -32,5 +43,5 @@ function planeta_get_welcome_page()
 		</a>
 	</div>
 </div>
-<?php
-} ?>
+<?php }
+?>
