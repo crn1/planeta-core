@@ -101,7 +101,7 @@ function planeta_metabox_number_save($post_id)
 	}
 
 	$post = get_post($post_id);
-	if($post->post_type == 'number')
+	if($post->post_type === 'number')
 	{
 		if(array_key_exists('number_value', $_POST))
 		{

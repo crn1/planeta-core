@@ -191,7 +191,7 @@ function planeta_metabox_team_save($post_id)
 	}
 
 	$post = get_post($post_id);
-	if($post->post_type == 'team')
+	if($post->post_type === 'team')
 	{
 		if(array_key_exists('member_name', $_POST))
 		{

@@ -59,7 +59,7 @@ function planeta_metabox_generic_save_template($post_id, $index)
 	}
 
 	$post = get_post($post_id, $index);
-	if($post->post_type == "generic-${index}")
+	if($post->post_type === "generic-${index}")
 	{
 		if(array_key_exists('generic_url', $_POST))
 		{

@@ -69,7 +69,7 @@ function planeta_metabox_price_display()
 						type='checkbox'
 						id='price_highlight'
 						name='price_highlight'
-						<?php if($price_highlight == 'on'): ?>
+						<?php if($price_highlight === 'on'): ?>
 						checked
 						<?php endif; ?>
 					/>
@@ -180,7 +180,7 @@ function planeta_metabox_price_save($post_id)
 	}
 
 	$post = get_post($post_id);
-	if($post->post_type == 'price')
+	if($post->post_type === 'price')
 	{
 		update_post_meta($post_id, 'price_highlight', $_POST['price_highlight']);
 		if(array_key_exists('price_tag', $_POST))

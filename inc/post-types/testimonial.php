@@ -129,7 +129,7 @@ function planeta_metabox_testimonial_save($post_id)
 	}
 
 	$post = get_post($post_id);
-	if($post->post_type == 'testimonial')
+	if($post->post_type === 'testimonial')
 	{
 		if(array_key_exists('author_name', $_POST))
 		{

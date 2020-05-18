@@ -68,7 +68,7 @@ function planeta_metabox_service_save($post_id)
 	}
 
 	$post = get_post($post_id);
-	if($post->post_type == 'service')
+	if($post->post_type === 'service')
 	{
 		if(array_key_exists('service_title', $_POST))
 		{
