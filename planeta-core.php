@@ -16,6 +16,25 @@ define('PLANETA_CORE_PATH', trailingslashit(plugin_dir_path(__FILE__)));
 //Planeta Welcome Menu
 require_once PLANETA_CORE_PATH . '/welcome.php';
 
+function planeta_register_welcome_page() {
+	add_menu_page(
+		'Planeta',
+		'Planeta',
+		'manage_options',
+		'planeta_welcome',
+		'planeta_get_welcome_page',
+		'dashicons-admin-site-alt', 2);
+
+	add_submenu_page(
+		'planeta_welcome',
+		'Welcome',
+		'Welcome',
+		'manage_options',
+		'planeta_welcome',
+		'planeta_get_welcome_page', 0);
+}
+add_action('admin_menu', 'planeta_register_welcome_page');
+
 //Register Custom Post Types
 require_once PLANETA_CORE_PATH . '/inc/post-types/testimonial.php';
 require_once PLANETA_CORE_PATH . '/inc/post-types/project.php';
