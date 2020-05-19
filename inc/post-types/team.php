@@ -279,6 +279,7 @@ add_action('admin_menu', 'planeta_add_team_submenu');
 add_filter('manage_team_posts_columns', 'planeta_team_columns');
 function planeta_team_columns($columns)
 {
+	$columns['featured_image'] = esc_html__('Image', 'planeta');
 	$columns['member_name'] = esc_html__('Name', 'planeta');
 	$columns['member_position'] = esc_html__('Position', 'planeta');
 	$columns['member_description'] = esc_html__('Description', 'planeta');
@@ -293,6 +294,11 @@ function custom_team_column($column, $post_id)
 	global $post;
 	switch($column)
 	{
+		case 'featured_image':
+			$featured_image = get_the_post_thumbnail_url();
+			echo "<img class='member-image' src='${featured_image}' />";
+			break;
+
 		case 'member_name':
 			$member_name = get_post_meta($post->ID, 'member_name', true);
 			echo esc_html($member_name);
@@ -302,6 +308,7 @@ function custom_team_column($column, $post_id)
 			$member_position = get_post_meta($post->ID, 'member_position', true);
 			echo esc_html($member_position);
 			break;
+
 
 		case 'member_description':
 			$member_description = get_post_meta($post->ID, 'member_description', true);

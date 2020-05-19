@@ -56,13 +56,13 @@ function custom_tech_column($column, $post_id)
 	global $post;
 	switch($column)
 	{
+		case 'featured_image':
+			$featured_image = get_the_post_thumbnail_url();
+			echo "<img class='tech-image' src='${featured_image}' />";
+			break;
 		case 'title':
 			$title = get_the_title();
 			echo $title;
-			break;
-		case 'featured_image':
-			$featured_image = get_the_post_thumbnail_url();
-			echo "<img style='max-height: 512px; max-width: 512px;' src='${featured_image}' />";
 			break;
 	}
 }

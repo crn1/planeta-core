@@ -62,7 +62,7 @@ function custom_client_column($column, $post_id)
 			break;
 		case 'featured_image':
 			$featured_image = get_the_post_thumbnail_url();
-			echo "<img style='max-height: 512px; max-width: 512px;' src='${featured_image}' />";
+			echo "<img class='client-image' src='${featured_image}' />";
 			break;
 	}
 }

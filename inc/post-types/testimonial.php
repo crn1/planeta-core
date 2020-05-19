@@ -196,6 +196,7 @@ add_action('admin_menu', 'planeta_add_testimonial_submenu');
 add_filter('manage_testimonial_posts_columns', 'planeta_testimonial_columns');
 function planeta_testimonial_columns($columns)
 {
+	$columns['featured_image'] = esc_html__('Author Image', 'planeta');
 	$columns['author_name'] = esc_html__('Author', 'planeta');
 	$columns['testimonial_excerpt'] = esc_html__('Excerpt', 'planeta');
 	unset($columns['title']);
@@ -209,6 +210,10 @@ function custom_testimonial_column($column, $post_id)
 	global $post;
 	switch($column)
 	{
+		case 'featured_image':
+			$featured_image = get_the_post_thumbnail_url();
+			echo "<img class='testimonial-image' src='${featured_image}' />";
+			break;
 		case 'author_name':
 			$author_name = get_post_meta($post->ID, 'author_name', true);
 			echo esc_html($author_name);

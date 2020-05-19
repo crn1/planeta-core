@@ -127,6 +127,7 @@ add_action('admin_menu', 'planeta_add_service_submenu');
 add_filter('manage_service_posts_columns', 'planeta_service_columns');
 function planeta_service_columns($columns)
 {
+	$columns['featured_image'] = esc_html__('Image', 'planeta');
 	$columns['service_title'] = esc_html__('Name', 'planeta');
 	$columns['service_description'] = esc_html__('Description', 'planeta');
 	unset($columns['title']);
@@ -140,6 +141,11 @@ function custom_service_column($column, $post_id)
 	global $post;
 	switch($column)
 	{
+		case 'featured_image':
+			$featured_image = get_the_post_thumbnail_url();
+			echo "<img class='service-image' src='${featured_image}' />";
+			break;
+
 		case 'service_title':
 			$service_title = get_post_meta($post->ID, 'service_title', true);
 			echo esc_html($service_title);
