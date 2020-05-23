@@ -3,10 +3,9 @@
 function planeta_get_welcome_page()
 {
 	$welcome = esc_html__("Welcome to the Planeta Theme!", 'planeta');
-	$goto_customizer = esc_html__("If you haven't already, go to Customizer and...", 'planeta');
-	$install_kirki = esc_html__("Install the Kirki Framework to unlock the power of this theme!", 'planeta');
-	$choose_preset = esc_html__("Choose your Theme Preset", 'planeta');
-	$edit_sections = esc_html__("Edit Frontpage Sections to suit your needs", 'planeta');
+	$goto_customizer = esc_html__("If you haven't already...", 'planeta');
+	$install_plugins = esc_html__("Install the necessary plugins", 'planeta');
+	$choose_demo = esc_html__("Import your demo at Appearance -> Import Demo Data", 'planeta');
 	$dont_panic = esc_html__("Lost? Don't panic, read...", 'planeta');
 	$documentation = esc_html__("Documentation", 'planeta'); ?>
 <div id='welcome-container'>
@@ -17,9 +16,8 @@ function planeta_get_welcome_page()
 
 	<p class='ol-notice'><?php echo $goto_customizer; ?></p>
 	<ol>
-		<li><?php echo $install_kirki; ?></li>
-		<li><?php echo $choose_preset; ?></li>
-		<li><?php echo $edit_sections; ?></li>
+		<li><?php echo $install_plugins; ?></li>
+		<li><?php echo $choose_demo; ?></li>
 	</ol>
 	<div class='docs-container'>
 	<p class='docs-notice'><?php echo $dont_panic; ?></p>
