@@ -156,8 +156,8 @@ function planeta_add_number_submenu()
 {
 add_submenu_page(
 	'planeta_welcome',
-	esc_html__('Number', 'planeta'),
-	esc_html__('Number', 'planeta'),
+	esc_html__('Numbers', 'planeta'),
+	esc_html__('Numbers', 'planeta'),
 	'manage_options',
 	'edit.php?post_type=number');
 }
