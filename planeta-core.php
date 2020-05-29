@@ -75,10 +75,10 @@ function planeta_ocdi_import_files()
 			'local_import_customizer_file' 	=> PLANETA_CORE_PATH . '/ocdi/agency-1-customizer.dat',
 		),
 		array(
-			'import_file_name'							=> esc_html__('Retrowave Agency', 'planeta'),
-			'local_import_file'            	=> PLANETA_CORE_PATH . '/ocdi/agency-retrowave-demo-content.xml',
-			'local_import_widget_file'     	=> PLANETA_CORE_PATH . '/ocdi/agency-retrowave-widgets.wie',
-			'local_import_customizer_file' 	=> PLANETA_CORE_PATH . '/ocdi/agency-retrowave-customizer.dat',
+			'import_file_name'							=> esc_html__('Agency Portfolio', 'planeta'),
+			'local_import_file'            	=> PLANETA_CORE_PATH . '/ocdi/agency-portfolio-1-demo-content.xml',
+			'local_import_widget_file'     	=> PLANETA_CORE_PATH . '/ocdi/agency-portfolio-1-widgets.wie',
+			'local_import_customizer_file' 	=> PLANETA_CORE_PATH . '/ocdi/agency-portfolio-1-customizer.dat',
 		),
 	);
 }
