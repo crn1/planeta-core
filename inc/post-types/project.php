@@ -29,6 +29,7 @@ function planeta_register_post_type_project()
 		'show_in_nav_menus'			=> false,
 		'show_in_menu'					=> false,
 		'show_in_rest'					=> true,
+		'has_archive'						=> true,
 		'supports'							=> array(
 			'title',
 			'editor',
