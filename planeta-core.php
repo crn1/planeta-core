@@ -80,6 +80,12 @@ function planeta_ocdi_import_files()
 			'local_import_widget_file'     	=> PLANETA_CORE_PATH . '/ocdi/agency-portfolio-1-widgets.wie',
 			'local_import_customizer_file' 	=> PLANETA_CORE_PATH . '/ocdi/agency-portfolio-1-customizer.dat',
 		),
+		array(
+			'import_file_name'							=> esc_html__('Freelancer', 'planeta'),
+			'local_import_file'            	=> PLANETA_CORE_PATH . '/ocdi/freelancer-1-demo-content.xml',
+			'local_import_widget_file'     	=> PLANETA_CORE_PATH . '/ocdi/freelancer-1-widgets.wie',
+			'local_import_customizer_file' 	=> PLANETA_CORE_PATH . '/ocdi/freelancer-1-customizer.dat',
+		),
 	);
 }
 add_filter('pt-ocdi/import_files', 'planeta_ocdi_import_files');
