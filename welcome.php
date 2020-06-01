@@ -11,7 +11,7 @@ function planeta_get_welcome_page()
 <div id='welcome-container'>
 	<h1>
 		<?php echo $welcome; ?>
-		<small class='version-notice'>alpha</small>
+		<small class='version-notice'>beta</small>
 	</h1>
 
 	<p class='ol-notice'><?php echo $goto_customizer; ?></p>
